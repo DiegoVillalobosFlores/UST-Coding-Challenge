@@ -34,7 +34,7 @@
   const result = [];
   const buffer = {};
   for ( const v of arr){
-    if(!buffer[v]) {
+    if(buffer[v] === undefined) {
       buffer[v.toString()] = v;
       continue;
     }
@@ -42,7 +42,7 @@
   }
   console.log(result);
   return result;
-})([1,2,'3',1,2,3,4,5,6,4])
+})([1,6,4,0,0])
 
 /* [1,1,2,3],
   i:0 v:1 :
